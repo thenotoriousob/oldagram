@@ -1,0 +1,102 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /* Was blocked from the website for Source Sans Pro */
+    font-family: "Source Sans 3", sans-serif;;
+}
+
+p {
+    font-size: 0.75rem;
+}
+
+.container {
+    max-width: 375px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Images */
+
+.app-logo {
+    width: 125px;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.post-user-avatar {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* vertical-align: middle; */
+}
+
+.post-img {
+    width: 100%;
+    /* Remove white space from underneath the image */
+    display: block;
+}
+
+.app-icons {
+    margin: 20px 10px 0px 10px;
+}
+
+.app-icon {
+    width: 25px;
+    margin-right: 20px;
+}
+
+.app-icon:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C6C6C6;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+/* Posts */
+.post-user {
+    margin: 10px;
+    /* Prevent collapsing margins */
+    padding: 1px;
+}
+
+.post-user p {
+    margin: 0;
+}
+
+.post-user-name {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.post-user-info {
+    margin-top: 2px;
+}
+
+.post-likes {
+    margin-top: 6px;
+}
+
+.post-text {
+    margin-bottom: 16px;
+}
+
+.post p {
+    margin-left: 10px;
+}
+
+/* Utility class */
+.bold-text {
+    font-weight: 700;
+}
