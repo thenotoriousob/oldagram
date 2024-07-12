@@ -2,16 +2,20 @@ html, body {
     margin: 0;
     padding: 0;
     /* Was blocked from the website for Source Sans Pro */
-    font-family: "Source Sans 3", sans-serif;;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 p {
     font-size: 0.75rem;
 }
 
+section {
+    margin-bottom: 25px;
+}
+
 .container {
     max-width: 375px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     margin: 0 auto;
 }
@@ -30,9 +34,7 @@ p {
 
 .post-user-avatar {
     float: left;
-    margin-left: 10px;
     margin-right: 10px;
-    /* vertical-align: middle; */
 }
 
 .post-img {
@@ -50,7 +52,8 @@ p {
     margin-right: 20px;
 }
 
-.app-icon:hover {
+.app-icon:hover,
+.app-icon:active {
     opacity: 0.5;
     cursor: pointer;
 }
@@ -64,7 +67,7 @@ p {
     padding: 20px;
 }
 
-/* Posts */
+/* Post User */
 .post-user {
     margin: 10px;
     /* Prevent collapsing margins */
@@ -76,13 +79,14 @@ p {
 }
 
 .post-user-name {
-    margin-bottom: 0;
     font-weight: 700;
 }
 
 .post-user-info {
     margin-top: 2px;
 }
+
+/* Posts */
 
 .post-likes {
     margin-top: 6px;
@@ -99,4 +103,9 @@ p {
 /* Utility class */
 .bold-text {
     font-weight: 700;
+}
+
+.spacer {
+    background-color: #EDEDED;
+    height: 25px;
 }
