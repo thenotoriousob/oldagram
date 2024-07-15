@@ -1,40 +1,93 @@
-html, body {
+:root {
+    --grey-background: #EDEDED;
+    --white-background: #FFFFFF;
+    --pink-background: #ffc0cb;
+    --header-separator: #C6C6C6;
+    --text-color: #000000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* Body and Container */
+
+body {
     /* Was blocked from the website for Source Sans Pro */
     font-family: "Source Sans 3", sans-serif;
+    color: var(--text-color);
+}
+
+body, .container {
+    background-color: var(--grey-background);;
+}
+
+.container {
+    max-width: 23.5rem;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--header-separator);
+    padding: 1.25rem;
+}
+
+header, section {
+    background-color: var(--white-background);
+}
+
+.app-logo {
+    width: 7.75rem;
+}
+
+.avatar {
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 50%;
+}
+
+/* Posts */
+section {
+    margin-bottom: 1.25rem;
+    /* To prevent collapsing margin */
+    padding-bottom: 1px;
 }
 
 p {
     font-size: 0.75rem;
 }
 
-section {
-    margin-bottom: 25px;
+.post p {
+    margin-left: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
-.container {
-    max-width: 375px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 0 auto;
+.post p:last-child {
+  margin-bottom: 1rem;
 }
 
-/* Images */
-
-.app-logo {
-    width: 125px;
+/* Post User */
+.post-user {
+    padding: 0.625rem;
 }
 
-.avatar {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
+.post-user-info {
+    margin-top: 2px;
+    line-height: 1rem;
 }
 
 .post-user-avatar {
     float: left;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .post-img {
@@ -43,61 +96,35 @@ section {
     display: block;
 }
 
+.app-icon-bg {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    margin-top: 0.5rem;
+}
+
 .app-icons {
-    margin: 20px 10px 0px 10px;
+    display: flex;
 }
 
-.app-icon {
-    width: 25px;
-    margin-right: 20px;
-}
-
-.app-icon:hover,
-.app-icon:active {
-    opacity: 0.5;
+.app-icon-bg:hover {
+    background-color: var(--pink-background);
+    transition: 1s;
     cursor: pointer;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #C6C6C6;
-    margin-bottom: 10px;
-    padding: 20px;
+.app-icon {
+    margin: auto;
+    width: 50%; 
 }
-
-/* Post User */
-.post-user {
-    margin: 10px;
-    /* Prevent collapsing margins */
-    padding: 1px;
-}
-
-.post-user p {
-    margin: 0;
-}
-
-.post-user-name {
-    font-weight: 700;
-}
-
-.post-user-info {
-    margin-top: 2px;
-}
-
-/* Posts */
 
 .post-likes {
-    margin-top: 6px;
+    margin-top: 0.375rem;
 }
 
 .post-text {
-    margin-bottom: 16px;
-}
-
-.post p {
-    margin-left: 10px;
+    margin-bottom: 1rem;
 }
 
 /* Utility class */
@@ -105,7 +132,6 @@ section {
     font-weight: 700;
 }
 
-.spacer {
-    background-color: #EDEDED;
-    height: 25px;
+.liked {
+    background-color: var(--pink-background);
 }
