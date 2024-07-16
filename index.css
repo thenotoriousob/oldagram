@@ -68,7 +68,7 @@ main {
 section {
     scroll-snap-align: center;
     flex-shrink: 0;
-    height: 550px;
+    height: max-content;
     background-color: white;
     border-radius: 14px;
     margin-bottom: 1.25rem;
@@ -116,6 +116,7 @@ p {
     border-radius: 50%;
     display: flex;
     margin-top: 0.5rem;
+    transition: background-color  1s;
 }
 
 .app-icons {
@@ -124,7 +125,6 @@ p {
 
 .app-icon-bg:hover {
     background-color: var(--pink-background);
-    transition: 1s;
     cursor: pointer;
 }
 
