@@ -56,7 +56,21 @@ header, section {
 }
 
 /* Posts */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 550px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
 section {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    height: 550px;
+    background-color: white;
+    border-radius: 14px;
     margin-bottom: 1.25rem;
     /* To prevent collapsing margin */
     padding-bottom: 1px;
